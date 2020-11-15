@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap');
+
+/* font-family: 'Nunito Sans', sans-serif; 
+    regular : 400
+    semi-bold: 600
+    bold : 700
+    extra-bold : 800
+    Black : 900
+*/
+
+/*header*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container-login-register{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.login-illustration{
+    margin-left: 50px;
+    width: 100%;
+}
+.sign-in-up{
+    width: 100%;
+    height: max-content;
+    padding-left: 100px;
+    padding-top: 100px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.form{
+    position: absolute;
+    display: flex;
+    top: 12.3%;
+    left: 100%;
+    transform: translateX(100%);
+    transition: 1s;
+   
+}
+.active{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    left: 0%;
+    transform: translateX(0%);
+    transition: 1s;
+    
+   
+}
+
+.sign-in-header h5, .sign-up-header h5{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: #060606;
+}
+
+.sign-in-header p, .sign-up-header p{
+    width: 450px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.password, .check-forget, .account-type{
+    margin-top: 20px;
+}
+.email,.password,.account-type{
+    display: flex;
+    flex-direction: column;
+}
+.email label, .password label, .check-box label, .account-type label, .account-type option{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+
+#email-login,#password-login,#email-register,#password-register,#conf-password-register,#name{
+    width: 350px;
+    height: 36px;
+    margin-top: 10px;
+    border-radius: 9px;
+    border-color: rgba(00, 00, 00, 0.12);
+    padding: 20px;
+}
+
+#acc-type{
+    width: 150px;
+    height: 45px;
+    margin-top: 10px;
+    border-radius: 9px;
+    border-color: rgba(00, 00, 00, 0.12);
+    text-indent: 20px;
+}
+
+#name{
+    margin-bottom: 20px;
+}
+
+.check-forget{
+    display: flex;
+    flex-direction: row;
+    width: 350px;
+}
+
+.forgot-pass{
+    margin-left: 100px;
+}
+
+.forgot-pass a{
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #2C9FC4;
+}
+
+.btn-sign-in, .btn-sign-up{
+    width: 350px;
+    margin-top: 40px;
+    text-align: right;
+}
+
+.submit-login, .submit-register{
+    background-color: #27AE60;
+    border: none;
+    width: 120px;
+    height: 36px;
+    color: white;
+    padding: 6px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0px 4px 5px #c2c2c2;
+}
+
+.no-account, .have-account{
+    text-align: center;
+    margin-top: 35px;
+    width: 350px;
+}
+
+.no-account p, .have-account p{
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #808080;
+    display: inline;
+}
+
+.no-account a, .have-account a{
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2C9FC4;
+}
+
+.account-type{
+    margin-bottom: 20px;
+}
+
+.check-box-acc{
+    display: flex;
+    width: 270px;
+    align-items: center;
+    justify-content: space-between;
+}
+.check-box{
+    display: flex;
+    width: 140px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.submit-login:hover, .submit-register:hover{
+    background-color:  #239454;
+}
+
+/*footer */
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    background-color: #F9FDFF;
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    padding-top: 35px;
+}
+
+.footer-content h5{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #163F5B;
+}
+
+.menu p, .follow-us p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #163F5B;
+}
+
+.ticketin{
+    display: flex;
+    flex-direction: column;
+    width: 277px;
+    margin-left: 130px;
+    text-align: center;
+}
+
+.ticketin p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #262627;
+}
+
+.menu, .follow-us, .payment{
+    margin-left: 150px;
+}
+
+.follow-us p{
+    display: inline-block;
+}
+
+.copyright{
+    text-align: center;
+    padding: 10px;
+}
+
+.copyright p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #163F5B;
+    display: inline;
+}
+/*footer stop*/
+
+
+
+
+
+
+
+
+
+
