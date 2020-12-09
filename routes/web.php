@@ -1,7 +1,7 @@
 <?php
-
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\show;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,11 +22,17 @@ Route::get('/bantuan', function () {
 Route::get('/tentangkami', function () {
     return view('tentangkami/tentangkami');
 });
-Route::get('/login', function () {
-    return view('tentangkami/tentangkami');
-});
-Route::get('/pesantiket', function () {
-    return view('tentangkami/tentangkami');
-});
 
+Route::get('/pesantiket', function () {
+    return view('pesantiket/pesantiket');
+});
+Route::get('/login','UserController@create');
+Route::post('/login','UserController@store');
+Route::get('/logindata','UserController@index');
+// Route::get('/add','CarController@create');
+// Route::post('/add','CarController@store');
+// Route::get('car','CarController@index');
+// Route::get('edit/{id}','CarController@edit');
+// Route::post('edit/{id}','CarController@update');
+// Route::delete('{id}','CarController@destroy');
 

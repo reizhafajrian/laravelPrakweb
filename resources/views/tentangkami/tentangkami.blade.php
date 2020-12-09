@@ -21,7 +21,7 @@
 			<h2>TENTANG KAMI</h2>
 		</div>
 		<div class="image_icon">
-			<img src="image/tentangkamiimage/tentangkamiAssets/undraw_tentangkami.png" alt="">
+			<img src="image/tentangkamiAssets/undraw_tentangkami.png" alt="">
 		</div>
 		</div>
 	</section>
@@ -53,6 +53,6 @@
 		</div>
 	</section>
 		<footer-tiket></footer-tiket>
- 
+	<script type="module" src="/js/tentangkami/tentangkami.js"></script>
 </body>
 </html>

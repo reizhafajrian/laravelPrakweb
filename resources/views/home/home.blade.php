@@ -22,7 +22,7 @@
                                 kenyamanan anda, ayo pesan tiketmu di <span id="text-ticketin">TicketIN</span></p>
                         </div>
                         <div class="container-btn-order">
-                            <a class="btn-order" href="#">Pesan</a>
+                            <a class="btn-order" href="{{url('pesantiket')}}">Pesan</a>
                         </div>
                     </div>
                     <div>
