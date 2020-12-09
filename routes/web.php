@@ -2,6 +2,7 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\show;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +27,9 @@ Route::get('/tentangkami', function () {
 Route::get('/pesantiket', function () {
     return view('pesantiket/pesantiket');
 });
-Route::get('/login','UserController@create');
+Route::get('/login',function(){
+    return view("login/login");
+});
 Route::post('/login','UserController@store');
 Route::get('/logindata','UserController@index');
 // Route::get('/add','CarController@create');

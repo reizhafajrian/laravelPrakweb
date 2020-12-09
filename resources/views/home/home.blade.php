@@ -1,14 +1,12 @@
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="/styles/home/home.css">
+@extends('layout/template')
+@section('title')
+Home
+@endsection
+@section('css')
+<link rel="stylesheet" href="/styles/home/home.css">
+@endsection
 
-    </head>
-    <body>
-
-       <header-tiket></header-tiket>
+@section('content')
         <section class="onboarding-home">
             <div class="container-onboard-home">
                 <img id="img-onboard-home" src="image/homeAssets/bg_home.svg" alt="background-image/homeAssets">
@@ -122,9 +120,5 @@
             </div>
         </section>
       
-           <footer-tiket></footer-tiket>
- 
         <script type="module" src="js/home/home.js"></script>
-
-    </body>
-</html>
+@endsection

@@ -95,7 +95,7 @@ class header extends HTMLElement{
         </style>
         <header class="header" id="header">
         <div class="container-header">
-            <img class="logo" src="image/componentAssets/bg_logo_ticketin.png" alt="logo-ticketin">
+            <a href="/"><img class="logo" src="image/componentAssets/bg_logo_ticketin.png" alt="logo-ticketin"></a>
             <nav class="nav-header">
                 <ul class="nav-links">
                     <li class="li-header"><a class="hover-a-header" href="/">Home</a></li>

@@ -1,16 +1,13 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans">
-	<link rel="stylesheet" href="/styles/tentangkami/tentangkami.css">
-	<title>Tentang Kami</title>
-</head>
-	
-<body>
-	<header-tiket></header-tiket>
+@extends('layout/template')
+@section('title')
+Tentang Kami
+@endsection
+@section('css')
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans">
+<link rel="stylesheet" href="/styles/tentangkami/tentangkami.css">
+@endsection
+@section('content')
 	<section class="onboarding_tentang_kami">
 		<div class="onboarding_container">
 		<div class="background_image">
@@ -52,7 +49,5 @@
 		</div>
 		</div>
 	</section>
-		<footer-tiket></footer-tiket>
 	<script type="module" src="/js/tentangkami/tentangkami.js"></script>
-</body>
-</html>
+@endsection
