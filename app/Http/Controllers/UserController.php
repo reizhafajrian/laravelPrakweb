@@ -15,14 +15,20 @@ class UserController extends Controller
     }
     public function store(Request $request)
     {
+ 
+        if( $request->header("Token")=="LDb9jIch5DfAnnTpwgkGiCuV7sAlJRSOactjvqr7"){
         $user = new User();//membuat inisialisasi bahwa $user adalah class User()
-        $user->name = $request->get('name');//mengisi name di class dengan get input di dalam html berupa name
-        $user->email = $request->get('email');//mengisi email di class dengan get input di dalam html berupa email
-        $user->password = $request->get('password');//mengisi password di class dengan get input di dalam html berupa password
-        $user->accountype = $request->get('accountype');//mengisi account type di class dengan get input di dalam html berupa accountype
-        $user->agreement = $request->get('agreement');//mengisi agreement di class dengan get input di dalam html berupa agreement
+        $user->name = $request->name;//mengisi name di class dengan get input di dalam html berupa name
+        $user->email = $request->email;//mengisi email di class dengan get input di dalam html berupa email
+        $user->password = $request->password;//mengisi password di class dengan get input di dalam html berupa password
+        $user->accountype = $request->accountype;//mengisi account type di class dengan get input di dalam html berupa accountype
+        $user->agreement = $request->agreement;//mengisi agreement di class dengan get input di dalam html berupa agreement
         $user->save();//mensave data kedalam mongodb
-        return redirect('login');//mengarahkan data ketika berhasil di save
+        return response()->json(["message"=>"true"]);
+        }
+        else{
+            return response()->json(["message"=>"Error Can't Find The Token"]);
+        }
     }
 
 }
