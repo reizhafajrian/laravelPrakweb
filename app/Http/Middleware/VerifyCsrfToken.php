@@ -12,7 +12,8 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-      
-        //
+        "http://localhost:8000/postgambar",
+        "http://localhost:8000/login"
+       
     ];
 }

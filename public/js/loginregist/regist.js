@@ -5,6 +5,7 @@ const buttonSignUp=document.querySelector(".submit-register");
 const tes=document.querySelector('meta[name="csrf-token"]').content
 const regist=()=>{
     let hasil={};
+    console.log(tes)
 const sendRegist=async()=>{
  
     await fetch('http://localhost:8000/login',{

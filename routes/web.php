@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TiketController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\show;
 use Illuminate\Http\Request;
@@ -23,9 +24,12 @@ Route::get('/bantuan', function () {
 Route::get('/tentangkami', function () {
     return view('tentangkami/tentangkami');
 });
-
+Route::post('/postgambar', 'TiketController@store');
 Route::get('/pesantiket', function () {
     return view('pesantiket/pesantiket');
+});
+Route::get('/pasangacara', function () {
+    return view('tiket/pasangacara');
 });
 Route::get('/login',function(){
     return view("login/login");

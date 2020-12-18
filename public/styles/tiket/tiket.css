@@ -1,94 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-.tiket-info-contianer{
-    display: flex;
-    flex-direction: column;
-    width: 1350px;
-    height: 820px;
-    max-width: 100%;
-    justify-content: space-around;
-    margin: 0px auto;
-}
-.background-image-tiket-info{
-    position: absolute;
-    display: flex;
-    width: 100%;
-}
-.background-image-tiket-info img{
-    position: relative;
-    width: 100%;
-}
-.input-group{
-    width: 600px;
-    max-width: 100%;
-    display: flex;
-    align-self: center;
-}
-.input-group-text{
-    background-color: #F5F6FA;
-    color: #006EAC;
-    border: none;
-    border-top-left-radius: 17px;
-    border-bottom-left-radius: 17px;
-}
-.form-control{
-    background-color:  #F5F6FA;
-    border: none;
-    border-bottom-right-radius: 17px;
-    border-top-right-radius: 17px;
-}
-.tiket-container{
-    position: relative;
-    width: 1168px;
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    margin: 0px auto;
-    justify-content: space-around;
-}
-.image-tiket-detail{
-    display: flex;
-    flex-direction: row;
-    width: 812px;
-    justify-content: space-around;
-}
-.more-image-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
+.pasang-tiket-onboard{
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
     max-width: 100%;
+    margin: 0px auto;
+    margin-bottom: 30px;
 }
-.image-and-text-tiket{
+image-item{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 812px;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
 }
-.text-tiket{
+.image-card label{
+    width:150px;
+    height: 150px;
     display: flex;
-    flex-direction: column;
-    width: 357px;
-}
-.harga-tiket-container{
-    width: 320px;
-    height: 633px;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    background: #FFFFFF;
-
-    box-shadow: 0px 0px 5px rgba(0, 110, 172, 0.2);
-    border-radius: 15px;
 }
-.harga-tiket-container h1{
+.image-card input{
+    display: none;
+}
+.background-image {
+    position: absolute;
+    width: max-content;
+}
+.background-image img{
+    position: relative;
+    width: 1440px;
+}
+.pasang-tiket-onboard{
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.text{
+    display: flex;
+    position: relative;
+    justify-content: center ;
+}
+.text h1{
+    width: max-content;
     font-family: Nunito Sans;
-font-style: normal;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 50px;
+/* identical to box height, or 78% */
+
+display: flex;
+align-items: flex-end;
+text-align: center;
+
+color: #054A72;
+}
+.title{
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 2px solid rgba(0, 110, 172, 0.4);
+}
+.title h2{
+    width: max-content;
+    font-style: normal;
 font-weight: 600;
 font-size: 24px;
 line-height: 50px;
@@ -96,65 +77,120 @@ line-height: 50px;
 
 display: flex;
 align-items: center;
-text-align: center;
 
 color: #054A72;
-}
 
-.harga-tiket-container h2{
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 30px;
-    /* identical to box height, or 100% */
-    
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    color: #27AE60;
-}
-.harga-button{
+} 
+.add-photo,.detail-produk-container,.tempat-waktu-container,.harga-tiket-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 240px;
-    height: 241px;
-    border-bottom: 1px solid #2F80ED;
-}
-#beli-tiket{
-    width: 240px;
-    height: 63px;
-
-    border: none;
-    background: #27AE60;
+    position: relative;
+    width: 1111px;
+    padding: 30px;
+    height: 327px;
+    margin: 0px auto;
+    background: #FFFFFF;
     box-shadow: 0px 0px 5px rgba(0, 110, 172, 0.2);
-    border-radius: 30px;
+    border-radius: 15px;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.image-container{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+}
+.image-card > img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+.image-card{
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 150px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px rgba(0, 110, 172, 0.2);
+    border-radius: 15px;
+}
+label{
+    font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+display: flex;
+align-items: flex-end;
+
+/* Semi Black */
+
+color: #393939;
+}
+form div{
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+form div input{
+    padding: 5px;
+    border: 1px solid #00000012;
+}
+textarea{
+    resize: none;
+}
+.harga-tiket-container >div> form > div{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    align-items: center;
+}
+
+.harga-tiket-container >div> form > div >label{
+    border: 1px solid #00000012;
+    display: flex;
+    justify-content: center;
+    background-color: #006EAC20 ;
+    align-items: center;
+}
+
+.harga-tiket-container input[type='number'] {
+        -moz-appearance:textfield;
+    }
+.harga-tiket-container  input::-webkit-outer-spin-button,
+.harga-tiket-container    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+.button button{
     font-family: Nunito Sans;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 50px;
-/* identical to box height, or 208% */
-
-
-    align-items: center;
-    text-align: center;
-color: #FFFFFF;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 110, 172, 0.2);
+    border-radius: 15px;
 }
-.location{
-    display: flex;
-    flex-direction: column;
-    width: 240px;
-    height: 160px;
-    border-bottom: 1px solid #2F80ED;
-}
-.logo-location img,.logo-date-and-time img{
-width: max-content;
-height: max-content;
-}
-.logo-location,.logo-date-and-time{
+.button{
     display: flex;
     flex-direction: row;
+    width: 1111px;
+    position: relative;
+    margin: 0px auto;
+    justify-content: flex-end;
+}
+.background-image{
+    top: 0;
+}
+#batal{
+    background: #EB5757;
+    margin-right: 48px;
+}
+#simpan{
+    background: #27AE60;
 }

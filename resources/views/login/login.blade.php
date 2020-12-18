@@ -12,8 +12,10 @@ Login
         <section>
             <div class="container-login-register">
                 <div class="sign-in-up">
-                    <div class="form active">
-                        <form class="form-login">
+                   
+                    <div class="form active"  >
+                        <form class="form-login" >
+                        @csrf
                         <div class="sign-in-header">
                             <h5>Sign in</h5>
                             <br>
@@ -22,15 +24,19 @@ Login
                         </div>
                         <div class="email">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email-login" placeholder="Email" required>
+                            <input type="email" name="email" id="email-login" placeholder="Email" >
                         </div>
                         <div class="password">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password-login" placeholder="Password" required>
+                            <input type="password" name="password" id="password-login" placeholder="Password" >
+                        </div>
+                        <div class="image">
+                            <input type="file" name="file" id="file" accept="image/png, image/jpeg" >
+                           
                         </div>
                         <div class="check-forget">
                             <div class="check-box">
-                                <input type="checkbox" id="logged-in" name="logged-in" value="true" required>
+                                <input type="checkbox" id="logged-in" name="logged-in" value="true" >
                                 <label for="logged-in">Keep me logged in</label>
                             </div>
                             <div class="forgot-pass">
@@ -38,7 +44,7 @@ Login
                             </div>
                         </div>
                         <div class="btn-sign-in">
-                            <button class="submit-login">Sign in</button>
+                            <button class="submit-login" type="submit" >Sign in</button>
                         </div>
                         <div class="no-account">
                             <p>Tidak punya akun?</p>
