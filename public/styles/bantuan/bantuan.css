@@ -16,6 +16,9 @@ p{
     position: relative;
     width: 100%;
 }
+.row{
+    margin: 0;
+}
 .onboarding-container {
     position: relative;
     padding: 100px;

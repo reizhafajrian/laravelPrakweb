@@ -14,7 +14,7 @@ Login
                 <div class="sign-in-up">
                    
                     <div class="form active"  >
-                        <form class="form-login" >
+                        <form class="form-login" method="POST" action="{{ route('login') }}">
                         @csrf
                         <div class="sign-in-header">
                             <h5>Sign in</h5>
@@ -30,10 +30,7 @@ Login
                             <label for="password">Password</label>
                             <input type="password" name="password" id="password-login" placeholder="Password" >
                         </div>
-                        <div class="image">
-                            <input type="file" name="file" id="file" accept="image/png, image/jpeg" >
-                           
-                        </div>
+
                         <div class="check-forget">
                             <div class="check-box">
                                 <input type="checkbox" id="logged-in" name="logged-in" value="true" >
@@ -44,7 +41,7 @@ Login
                             </div>
                         </div>
                         <div class="btn-sign-in">
-                            <button class="submit-login" type="submit" >Sign in</button>
+                            <button class="submit-login" type="submit" >{{ __('Login') }}</button>
                         </div>
                         <div class="no-account">
                             <p>Tidak punya akun?</p>
@@ -53,7 +50,7 @@ Login
                     </form>
                     </div>
                     <div class="form">
-                        <form class="form-regist">
+                        <form class="form-regist"  method="POST" action="{{route('register')}}">
                         @csrf
                         <div class="sign-up-header">
                             <h5>Sign up</h5>
@@ -67,15 +64,15 @@ Login
                         </div>
                         <div class="email">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email-register" placeholder="Email" required>
+                            <input type="email" name="email" id="email" placeholder="Email" required>
                         </div>
                         <div class="password">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password-register" placeholder="Password" required>
+                            <input type="password" name="password" id="password" placeholder="Password" required>
                         </div>
                         <div class="password">
                             <label for="conf-password">Password Confirmation</label>
-                            <input type="password" name="conf-password" id="conf-password-register" placeholder="Confirm your password" required>
+                            <input type="password" name="password_confirmation" id="password-confirm" placeholder="Confirm your password" required>
                         </div>
                      
                         <div class="account-type">

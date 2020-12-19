@@ -87,7 +87,7 @@
     color: #000000;
 }
 
-#email-login,#password-login,#email-register,#password-register,#conf-password-register,#name{
+#email-login,#password-login,#email,#password,#password-confirm,#name{
     width: 350px;
     height: 36px;
     margin-top: 10px;

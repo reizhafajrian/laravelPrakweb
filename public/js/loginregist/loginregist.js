@@ -32,8 +32,7 @@ window.onload=async()=>{
         }
     }
 }
-login();
-regist();
+
 
 
 

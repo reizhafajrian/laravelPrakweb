@@ -159,7 +159,7 @@ PesanTiket
                     </div>
                     <div class="location-filter">
                         <h1>Lokasi</h1>
-                        <form>
+                        <form class="form">
                             <div>
                                 <label for="Jakarta">DKI Jakarta</label>
                             <input type="radio" id="Jakarta" name="provinsi" value="Jakarta">
