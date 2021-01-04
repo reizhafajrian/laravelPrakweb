@@ -17,7 +17,11 @@ use Illuminate\Http\Request;
 |
 */
 
-
+Route::get('/view-data', 'AuthorizationController@viewData');
+Route::get('/create-data', 'AuthorizationController@createData');
+Route::get('/edit-data', 'AuthorizationController@editData');
+Route::get('/update-data', 'AuthorizationController@updateData');
+Route::get('/delete-data', 'AuthorizationController@deleteData');
 Route::get('/bantuan','BantuanController@index' );
 Route::get('/tentangkami', 'TentangKamiController@index');
 Route::post('/postgambar', 'TiketController@store');

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class PasangAcaraController extends Controller
 {
     //
@@ -13,6 +13,14 @@ class PasangAcaraController extends Controller
     }
 
     public function index(){
-        return view('tiket/pasangacara');
+            if(Auth::user()->accountype=="seller"){
+                return view("tiket/pasangacara");
+            }
+            else{
+                return abort('403');
+            }
     }
 }
+
+
+

@@ -2,8 +2,7 @@ import "../component/component.js"
 const form=document.querySelectorAll(".form");
 const click=document.querySelector(".no-account a");
 const clickSignUp=document.querySelector(".have-account a");
-import login from "./login.js"
-import regist from "./regist.js"
+
 window.onload=async()=>{
     click.onclick=()=>{
         let boolean=true

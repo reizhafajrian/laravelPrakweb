@@ -7,8 +7,7 @@ use Illuminate\Http\Request; //panggil class request
 class UserController extends Controller
 {
     public function index(){
-        $user=User::all();//menampilkan semua data user
-        return response()->json($user);//merespon user dalam bentuk json
+
     }
     public function create(){
         return view('login/login');//view yang di tampilkan terdapat didalam folder view folder login dan file blade login

@@ -19,10 +19,24 @@
             <a href="/"><img class="logo" src="image/componentAssets/bg_logo_ticketin.png" alt="logo-ticketin"></a>
             <nav class="nav-header">
                 <ul class="nav-links">
+        <?php
+
+        use App\Http\Controllers\BerandaController;
+        $data=new BerandaController();
+        $seller=$data->data();       
+         ?>
+         @if($seller=="seller")
+                    <li class="li-header"><a class="hover-a-header" href="/">Home</a></li>
+                    <li class="li-header"><a class="hover-a-header" href="/pesantiket">Tiket</a></li>
+                    <li class="li-header"><a class="hover-a-header" href="/pasangacara">Pasang Acara</a></li>
+                    <li class="li-header"><a class="hover-a-header" href="/tentangkami">Tentang Kami</a></li>
+                    <li class="li-header"><a class="hover-a-header" href="/bantuan">Bantuan</a></li>
+        @else
                     <li class="li-header"><a class="hover-a-header" href="/">Home</a></li>
                     <li class="li-header"><a class="hover-a-header" href="/pesantiket">Tiket</a></li>
                     <li class="li-header"><a class="hover-a-header" href="/tentangkami">Tentang Kami</a></li>
                     <li class="li-header"><a class="hover-a-header" href="/bantuan">Bantuan</a></li>
+                    @endif
                 </ul>
             </nav>
             @guest
