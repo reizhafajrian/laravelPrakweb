@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Http\Controllers\BerandaController;
 use Illuminate\Database\Eloquent\Model;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -19,6 +20,7 @@ class User extends Eloquent implements Authenticatable
     }
     public function hasPermission() {
         // dd($this->accountype);
+        
         return $this->accountype=="buyer"?:false;
     }
 

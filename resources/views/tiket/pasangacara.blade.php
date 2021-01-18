@@ -1,4 +1,3 @@
-
 @extends('layout/template')
 @section('title')
 Pasang Acara
@@ -7,94 +6,106 @@ Pasang Acara
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <link rel="stylesheet" href="styles/tiket/tiket.css">
 @endsection
-
+<!-- <img src="/image/pasangacara/Group 88@2x.png" alt=""> -->
+<!-- <img src="/image/pasangacara/mdi_add_a_photo.png" alt=""> -->
 @section('content')
-    <section class="pasang-tiket">
-        <div class="pasang-tiket-onboard">
-            <div class="background-image">
-                <img src="/image/pasangacara/Group 88@2x.png" alt="">
+<section class="pasang-tiket">
+    <div class="img-container">
+        <div class="img">
+            <img src="/image/pasangacara/Group 88@2x.png" alt="">
+        </div>
+        <div class="form-container">
+            <div>
+                <h1>Pasang Acara Anda</h1>
             </div>
-            <div class="text"><h1>Pasang Acara Anda</h1></div>
-            <div class="add-photo">
-                <div class="title"><h2>Foto Acara</h2></div>
-                <div class="image-container">
-                <form method="POST" action="http://localhost:8000/postgambar" enctype="multipart/form-data">
+            <div class="form-total">
+                <form action="pasangacara/postticket" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="image-card">
-                        <label for="file">
-                        <img src="/image/pasangacara/mdi_add_a_photo.png" alt="">
-                        </label>
-                        <input type="file" name="file[]" id="file" multiple>
-                        <button id="simpan" type="submit">Simpan</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="detail-produk">
-        <div class="detail-produk-container">
-            <div class="title"><h2>Tempat an Waktu Kegiatan Anda</h2></div>
-            <div class="form" >
-                <form action="">
-                    <div>
-                    <label for="namaacara">Nama Acara/Kegiatan</label>
-                    <input type="text" placeholder="nama acara">
-                    </div>
-                    <div>
-                    <label for="namaacara">Nama Acara</label>
-                    <input type="text">
-                    </div>
-                    <div>
-                    <label for="namaacara">Nama Acara</label>
-                    <textarea type="text-area" rows="4" cols="50" ></textarea> 
-                    </div>
-                </form>
-            </div>
-        </div>
-       
-    </section>
-    
-    <section class="tempat-waktu-kegiatan">
-        <div class="tempat-waktu-container">
-            <div class="title"><h2>Detail Produk</h2></div>
-            <div class="form">
-                <form action="">
-                    <div>
-                        <label for="lokasi">Lokasi</label>
-                        <input type="text" placeholder="Nama acara">
-                        </div>
-                        <div>
-                        <label for="waktumulai">Waktu Mulai</label>
-                        <input type="date">
-                        </div>
-                        <div>
-                        <label for="namaacara">Waktu Berakhir</label>
-                        <input type="date">
-                        </div>
-                </form>
-            </div>
-        </div>
-       
-    </section>
-    <section class="harga-tiket">
-        <div class="harga-tiket-container">
-            <div class="title"><h2>Harga Tiket</h2></div>
-            <div class="form">
-                <form action="">
-                    <div>
-                        <label for="harga">Rp</label>
-                        <input type="number" >
-                </form>
-            </div>
-        </div>
-       
-    </section>
-    <section class="button">
-        <button id="batal">Batal</button>
-        <button id="simpan">Simpan</button>
-    </section>
 
-  
-   <script src="js/tiket/tiket.js"></script>
+
+                    <div class="container-1">
+                        <div class="card image-upload">
+                            <div class="title">
+                                <h4>Foto Acara</h4>
+                            </div>
+                            <div class="container container-image">
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Example file input</label>
+                                    <input type="file" class="form-control-file" id="images" name="images[]" accept="image/*" multiple>
+                                </div>
+                                <div class="card image">
+                                    <!-- 
+                                    <img src="storage/images/NodfjYSXoHMD55Wn5Gmj2yZz0GYp2P8dhyqOacYU.png" alt=""> -->
+                                </div>
+                                <!-- <div class="card image">
+                                    <img src="\image\tiketAssets\image 10.png" alt="">
+                                </div>
+                                <div class="card image">
+                                    <img src="\image\tiketAssets\image 10.png" alt="">
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="card form-1">
+                            <div class="title">
+                                <h4>Tempat Dan Waktu Acara</h4>
+                            </div>
+                            <div class="container container-form">
+                                <div class="input">
+                                    <label for="Lokasi">Lokasi</label>
+                                    <input class="form-control" type="text" placeholder="Jakarta" name="lokasi" id="lokasi">
+                                </div>
+                                <div class="input">
+                                    <label for="mulai">Waktu Mulai</label>
+                                    <input class="form-control" type="text" placeholder="Desember" name="mulai" id="mulai">
+                                </div>
+                                <div class="input">
+                                    <label for="Lokasi">Waktu Berakhir</label>
+                                    <input class="form-control" type="text" placeholder="Oktber" name="akhir" id="akhir">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card form-2">
+                        <div class="title">
+                            <h4>Detail Produk</h4>
+                        </div>
+                        <div class="input">
+                            <label for="acara">Nama Acara/Kegiatan</label>
+                            <input class="form-control" type="text" placeholder="DWP" name="namaacara" id="namaacara">
+                        </div>
+                        <div class="input">
+                            <label for="kategori">Kategori</label>
+                            <select id="kategori" name="kategori" class="custom-select custom-select-lg mb-3">
+                                <option selected>Open this select menu</option>
+                                <option value="Workshop">workshop</option>
+                                <option value="Konser">Konser</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="input">
+                            <label for="desc">Deskripsi Acara / Kegiatan</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="textarea" id="textarea"></textarea>
+                        </div>
+
+                        <div class="input">
+                            <label for="harga">Harga</label>
+                            <div class="harga">
+                                <div class="Rp">Rp</div>
+                                <input class="form-control" type="number" placeholder="2000000" name="harga" id="harga">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-pill btn-success">Simpan</button>
+                        <button type="button" class="btn btn-pill btn-danger">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="js/tiket/tiket.js"></script>
 @endsection

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Tiket;
 use Illuminate\Http\Request;
 
 class PesanController extends Controller
@@ -13,6 +14,9 @@ class PesanController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        return view('pesantiket/pesantiket');
+        $tiket=new Tiket();
+        $data=$tiket->all();
+
+        return view('pesantiket/pesantiket', compact("data"));
     }
 }

@@ -12,10 +12,9 @@ class BerandaController extends Controller
     
     public function index(){
         if(Auth::check()){
-           if(Auth::user()->accountype=="buyer"){
-               $GetData=new GetData();
-               $GetData->setData("seller");
-               $data="seller";
+           if(Auth::user()->accountype=="seller"){
+             
+                $data="seller";
                 return view("home/home",compact("data"));
            }
             else{

@@ -10,10 +10,7 @@ class Tiket extends Eloquent
     protected $connection = 'mongodb'; //connection menggunakan mongodb jangan di ubah
     protected $collection = 'Tiket';//object di dalam database berupa user atau ini sama saja dengan table jika menggunakan sql
     protected $fillable = [
-        "gambar"
-    ];
-    protected $gridFs=[
-        "gambar"
+        "gambar","email","lokasi","mulai","berakhir","nama","kategori","desc","harga"
     ];
     //
 }

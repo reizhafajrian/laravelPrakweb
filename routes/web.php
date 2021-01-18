@@ -27,6 +27,8 @@ Route::get('/tentangkami', 'TentangKamiController@index');
 Route::post('/postgambar', 'TiketController@store');
 Route::get('/pesantiket', 'PesanController@index');
 Route::get('/pasangacara', 'PasangAcaraController@index');
+Route::get('/tiketdetail/{id}', 'TiketDetailController@index');
+Route::post('/pasangacara/postticket', 'PasangAcaraController@post');
 Auth::routes();
 
 Route::get('/', 'BerandaController@index');

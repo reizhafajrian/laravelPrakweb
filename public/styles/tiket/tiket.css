@@ -1,196 +1,184 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.pasang-tiket-onboard{
+.pasang-tiket-onboard {
     display: flex;
     flex-direction: column;
     width: 1440px;
     max-width: 100%;
     margin: 0px auto;
     margin-bottom: 30px;
+    position: relative;
 }
-image-item{
+
+.img {
+    position: absolute;
+}
+
+.img img {
+    position: relative;
+    width: 1350px;
+}
+
+.form-container {
+    position: relative;
+    width: 1120px;
+    margin: 0px auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-upload {
+    width: 500px;
+    height: 245px;
+    text-align: left;
+    border-radius: 15px !important;
+    padding: 15px 40px;
+    justify-content: center;
+}
+
+.form-container>div>h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 35px;
+    color: #054A72;
+    line-height: 50px;
+}
+
+.container-1 {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    justify-content: flex-start;
-}
-.image-card label{
-    width:150px;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.image-card input{
-    display: none;
-}
-.background-image {
-    position: absolute;
-    width: max-content;
-}
-.background-image img{
-    position: relative;
-    width: 1440px;
-}
-.pasang-tiket-onboard{
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.text{
-    display: flex;
-    position: relative;
-    justify-content: center ;
-}
-.text h1{
-    width: max-content;
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 64px;
-    line-height: 50px;
-/* identical to box height, or 78% */
-
-display: flex;
-align-items: flex-end;
-text-align: center;
-
-color: #054A72;
-}
-.title{
-    display: flex;
-    justify-content: flex-start;
-    border-bottom: 2px solid rgba(0, 110, 172, 0.4);
-}
-.title h2{
-    width: max-content;
-    font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 50px;
-/* identical to box height, or 208% */
-
-display: flex;
-align-items: center;
-
-color: #054A72;
-
-} 
-.add-photo,.detail-produk-container,.tempat-waktu-container,.harga-tiket-container{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 1111px;
-    padding: 30px;
-    height: 327px;
-    margin: 0px auto;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 5px rgba(0, 110, 172, 0.2);
-    border-radius: 15px;
-    justify-content: space-around;
-    margin-bottom: 30px;
-}
-.image-container{
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
     justify-content: space-between;
 }
-.image-card > img{
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-}
-.image-card{
-    background: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px;
-    width: 150px;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 5px rgba(0, 110, 172, 0.2);
-    border-radius: 15px;
-}
-label{
-    font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 27px;
-display: flex;
-align-items: flex-end;
 
-/* Semi Black */
-
-color: #393939;
-}
-form div{
-    display: grid;
-    grid-template-columns: 0.3fr 1fr;
-    align-items: baseline;
-    margin-bottom: 10px;
-}
-form div input{
-    padding: 5px;
-    border: 1px solid #00000012;
-}
-textarea{
-    resize: none;
-}
-.harga-tiket-container >div> form > div{
-    display: grid;
-    grid-template-columns: 0.1fr 1fr;
-    align-items: center;
+h4 {
+    margin: 0 !important;
 }
 
-.harga-tiket-container >div> form > div >label{
-    border: 1px solid #00000012;
-    display: flex;
-    justify-content: center;
-    background-color: #006EAC20 ;
-    align-items: center;
+.title {
+    height: 30px;
+    border-bottom: 1px solid #2F80ED;
+    margin-bottom: 20px;
 }
 
-.harga-tiket-container input[type='number'] {
-        -moz-appearance:textfield;
-    }
-.harga-tiket-container  input::-webkit-outer-spin-button,
-.harga-tiket-container    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-    }
-.button button{
-    font-family: Nunito Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 50px;
-    color: white;
-    width: 200px;
-    height: 50px;
-    border: none;
-    box-shadow: 0px 0px 5px rgba(0, 110, 172, 0.2);
-    border-radius: 15px;
+.title h4 {
+    font-size: 18px !important;
+    color: #054A72;
 }
-.button{
+
+.image {
+    width: max-content !important;
+    border-radius: 60px !important;
+    border: none !important;
+}
+
+.image>img {
+    width: 100px;
+}
+
+.container-image {
+    padding: 0px !important;
     display: flex;
     flex-direction: row;
-    width: 1111px;
-    position: relative;
-    margin: 0px auto;
-    justify-content: flex-end;
+    width: 350px;
+    justify-content: space-between;
+    align-items: center;
 }
-.background-image{
-    top: 0;
+
+.form-1,
+.form-2 {
+    border-radius: 15px !important;
+    display: flex;
+    width: 400px !important;
+    background: #FFf !important;
+    padding: 15px 40px;
+    justify-content: center;
 }
-#batal{
-    background: #EB5757;
-    margin-right: 48px;
+
+.container-form {
+    padding: 0px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 140px !important;
 }
-#simpan{
-    background: #27AE60;
+
+label {
+    margin: 0px !important;
+}
+
+.form-1>.container-form>.input>input {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    width: 212px !important;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-2 {
+    width: 1120px !important;
+    height: 390px !important;
+    justify-content: space-around;
+}
+
+#kategori {
+    width: 800px;
+    max-width: 100%;
+    margin: 0px !important;
+}
+
+.form-2>.input>input {
+    width: 800px;
+    max-width: 100%;
+}
+
+textarea {
+    width: 800px !important;
+    height: 86px !important;
+}
+
+.harga {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    align-items: center;
+}
+
+.Rp {
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    height: 37.99px;
+    background: rgba(0, 110, 172, 0.2);
+    font-weight: 600;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 350px;
+    margin-left: auto !important;
+}
+
+.harga>input {
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+button {
+    width: 150px !important;
 }
