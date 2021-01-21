@@ -11,8 +11,8 @@ const batal = document.querySelector("#batal")
 const spinner = document.querySelector(".spinner-border")
 const input = document.querySelectorAll("input")
 button.onclick = () => {
-    input.forEach(element => {
-        if ()
-    });
+    // input.forEach(element => {
+    //     if ()
+    // });
 
 }
