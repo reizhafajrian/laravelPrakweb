@@ -30,8 +30,8 @@ Pasang Acara
                             </div>
                             <div class="container container-image">
                                 <div class="form-group">
-                                    <label for="exampleFormControlFile1">Example file input</label>
-                                    <input type="file" class="form-control-file" id="images" name="images[]" accept="image/*" multiple>
+
+                                    <input type="file" class="form-control-file" id="images" name="images[]" accept="image/*" multiple required>
                                 </div>
                                 <div class="card image">
                                     <!-- 
@@ -56,11 +56,12 @@ Pasang Acara
                                 </div>
                                 <div class="input">
                                     <label for="mulai">Waktu Mulai</label>
-                                    <input class="form-control" type="text" placeholder="Desember" name="mulai" id="mulai">
+                                    <input placeholder="masukkan tanggal Awal" type="date" class="form-control datepicker" name="mulai" id="mulai" required>
+
                                 </div>
                                 <div class="input">
                                     <label for="Lokasi">Waktu Berakhir</label>
-                                    <input class="form-control" type="text" placeholder="Oktber" name="akhir" id="akhir">
+                                    <input placeholder="masukkan tanggal Awal" type="date" class="form-control datepicker" name="akhir" id="akhir" required>
                                 </div>
                             </div>
                         </div>
@@ -72,33 +73,32 @@ Pasang Acara
                         </div>
                         <div class="input">
                             <label for="acara">Nama Acara/Kegiatan</label>
-                            <input class="form-control" type="text" placeholder="DWP" name="namaacara" id="namaacara">
+                            <input class="form-control" type="text" placeholder="DWP" name="namaacara" id="namaacara" required>
                         </div>
                         <div class="input">
                             <label for="kategori">Kategori</label>
-                            <select id="kategori" name="kategori" class="custom-select custom-select-lg mb-3">
-                                <option selected>Open this select menu</option>
-                                <option value="Workshop">workshop</option>
-                                <option value="Konser">Konser</option>
-                                <option value="3">Three</option>
+                            <select id="kategori" name="kategori" class="custom-select custom-select-lg mb-3" required>
+                                <option value="workshop">workshop</option>
+                                <option value="konser">konser</option>
+                                <option value="wahana">wahana</option>
                             </select>
                         </div>
                         <div class="input">
                             <label for="desc">Deskripsi Acara / Kegiatan</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="textarea" id="textarea"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="textarea" id="textarea" required></textarea>
                         </div>
 
                         <div class="input">
                             <label for="harga">Harga</label>
                             <div class="harga">
                                 <div class="Rp">Rp</div>
-                                <input class="form-control" type="number" placeholder="2000000" name="harga" id="harga">
+                                <input class="form-control" type="number" placeholder="2000000" name="harga" id="harga" required>
                             </div>
                         </div>
                     </div>
                     <div class="button-group">
-                        <button type="submit" class="btn btn-pill btn-success">Simpan</button>
-                        <button type="button" class="btn btn-pill btn-danger">Batal</button>
+                        <button type="submit" id="save" class="btn btn-pill btn-success">Simpan</button>
+                        <button type="button" id="batal" class="btn btn-pill btn-danger">Batal</button>
                     </div>
                 </form>
             </div>
@@ -107,5 +107,8 @@ Pasang Acara
 </section>
 
 
-<script src="js/tiket/tiket.js"></script>
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<script src="/js/tiket/tiket.js"></script>
 @endsection

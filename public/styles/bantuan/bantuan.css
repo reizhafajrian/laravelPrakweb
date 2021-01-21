@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap');
+
 /*HTML BANTUAN*/
 
 .bg-image {
@@ -9,54 +10,56 @@
     right: auto;
     width: 100%;
 }
-p{
-    margin: 0 !important;
-}
+
 .bg-image img {
     position: relative;
     width: 100%;
 }
-.row{
-    margin: 0;
-}
+
 .onboarding-container {
     position: relative;
-    padding: 100px;
-    width: 1450px;
-    max-width: 100%;
+    justify-content: space-around;
     display: flex;
     flex-direction: row;
+    padding: 50px;
+    width: 1450px;
+    max-width: 100%;
     margin: 0px auto;
 }
+
 .message h1 {
     position: relative;
     font-family: Nunito Sans;
     font-style: normal;
     font-weight: 800;
-    font-size: 64px;
+    font-size: 56px;
     line-height: 50px;
     color: #054A72;
     background-color: transparent;
 }
+
 .message p {
     position: relative;
     font-family: Nunito Sans;
     font-style: normal;
     font-weight: normal;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 50px;
     color: #054A72;
     background-color: transparent;
 }
+
 .onboarding-icon {
     width: max-content;
     position: relative;
     width: 548px;
     height: 416px;
 }
+
 * {
     background-color: transparent;
 }
+
 .help-section {
     position: relative;
     display: grid;
@@ -64,9 +67,11 @@ p{
     max-width: 100%;
     margin: 0px auto;
 }
+
 .card-header {
     background-color: transparent;
 }
+
 .card-header a {
     color: rgba(0, 0, 0, 0.87);
     font-family: Nunito Sans;
@@ -75,6 +80,7 @@ p{
     font-size: 18px;
     line-height: 28px;
 }
+
 .card-li a {
     color: black;
     font-family: Nunito Sans;
@@ -83,9 +89,35 @@ p{
     font-size: 16px;
     line-height: 28px;
 }
+
 #konten-faq {
     display: none;
 }
+
+#konten1-faq {
+    display: none;
+}
+
+#konten2-faq {
+    display: none;
+}
+
+#konten3-faq {
+    display: none;
+}
+
+#konten4-faq {
+    display: none;
+}
+
+#konten5-faq {
+    display: none;
+}
+
+#konten6-faq {
+    display: none;
+}
+
 #konten-faq h2 {
     font-family: Nunito Sans;
     font-style: normal;
@@ -94,6 +126,7 @@ p{
     line-height: 28px;
     color: rgba(0, 0, 0, 0.87);
 }
+
 #konten-faq p {
     font-family: Nunito Sans;
     font-style: normal;
@@ -102,19 +135,23 @@ p{
     line-height: 28px;
     color: rgba(0, 0, 0, 0.87);
 }
-.input-group{
+
+.input-group {
     width: 600px;
     max-width: 100%;
     display: flex;
     align-self: center;
 }
-.form-control{
+
+.form-control {
     align-items: center;
 }
-.form-control::placeholder{
+
+.form-control::placeholder {
     font-size: 10px;
     align-content: center;
 }
+
 .onboarding-container input {
     font-family: Nunito Sans;
     font-style: normal;
@@ -124,12 +161,22 @@ p{
     align-items: flex-end;
     color: rgba(0, 0, 0, 0.20);
 }
-.bantuan-lain p{
+
+#search-button {
+    border: none;
+    padding: 0;
+    color: transparent;
+}
+
+.input-group-text {
+    height: 100%;
+}
+
+.bantuan-lain p {
     position: relative;
     height: 28px;
-
+    top: 180px;
     left: 55px;
-
     font-family: Nunito Sans;
     font-style: normal;
     font-weight: 600;
@@ -137,13 +184,13 @@ p{
     line-height: 28px;
     color: rgba(0, 0, 0, 0.87);
 }
+
 .bantuan-lain a {
     position: relative;
     width: 164px;
     height: 36px;
-
+    top: 180px;
     left: 55px;
-
     background: #27AE60;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;

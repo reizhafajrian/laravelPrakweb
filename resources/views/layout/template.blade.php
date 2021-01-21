@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
+    <?php header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS'); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="/styles/template/template.css">
     <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     @yield('css')
 
 </head>
@@ -46,12 +46,14 @@
             <a href="/login"><button class="btn-login-header">Masuk</button></a>
             @endif
             @else
-            <li class="nav-item dropdown">
-                <div class="nav-item-user">
-                    <img id="user" src="/image/asset/user.png" alt="">
-                    {{ Auth::user()->name }}
+            <div class="accordion" id="accordionExample">
+                <div>
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseTwo">
+                        <img id="user" src="/image/asset/user.png" alt="">
+                        {{ Auth::user()->name }}
+                    </button>
                 </div>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
@@ -60,8 +62,13 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
+
                 </div>
-            </li>
+            </div>
+
+
+
+
             @endguest
         </div>
     </header>
@@ -71,14 +78,14 @@
         <div class="container-footer">
             <div class="footer-content">
                 <div class="ticketin">
-                    <div><img src="image/componentAssets/ic_footer_logo.svg" alt="footer-logo"></div>
+                    <div><img src="/image/componentAssets/ic_footer_logo.svg" alt="footer-logo"></div>
                     <div>
                         <p>TicketIN adalah sebuah platform marketplace untuk melakukan transaksi berupa penjualan dan pembelian tiket .</p>
                     </div>
                 </div>
                 <div class="menu">
                     <h5>Menu</h5>
-                    <a href="/home">Home</a>
+                    <a href="/">Home</a>
                     <a href="/pesantiket">Tiket</a>
                     <a href="/tentangkami">Tentang Kami</a>
                     <a href="/bantuan">Bantuan</a>
@@ -86,15 +93,15 @@
                 <div class="follow-us">
                     <h5>Ikuti Kami</h5>
                     <div>
-                        <img src="image/componentAssets/ic_instagram.svg" alt="">
+                        <img src="/image/componentAssets/ic_instagram.svg" alt="">
                         <p>Ticket.in</p>
                     </div>
                     <div>
-                        <img src="image/componentAssets/ic_youtube.svg" alt="">
+                        <img src="/image/componentAssets/ic_youtube.svg" alt="">
                         <p>TicketIN Official</p>
                     </div>
                     <div>
-                        <img src="image/componentAssets/ic_facebook.svg" alt="">
+                        <img src="/image/componentAssets/ic_facebook.svg" alt="">
                         <p>Ticket IN</p>
                     </div>
                 </div>
@@ -105,7 +112,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <img src="image/componentAssets/ic_copyright.svg" alt="copyright">
+                <img src="/image/componentAssets/ic_copyright.svg" alt="copyright">
                 <p>2020 Copyright TicketIN</p>
             </div>
         </div>
@@ -113,9 +120,7 @@
     </footer>
 </body>
 <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script type="module" src="js/component/component.js"></script>
+<script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.min.js"></script>
+<script type="module" src="js/component/component.js"></script>
+
 </html>

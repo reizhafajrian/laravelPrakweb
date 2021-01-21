@@ -1,10 +1,12 @@
 <?php
+
+use App\Http\Controllers\PesanTiketController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TiketController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\show;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +28,17 @@ Route::get('/bantuan','BantuanController@index' );
 Route::get('/tentangkami', 'TentangKamiController@index');
 Route::post('/postgambar', 'TiketController@store');
 Route::get('/pesantiket', 'PesanController@index');
+
 Route::get('/pasangacara', 'PasangAcaraController@index');
 Route::get('/tiketdetail/{id}', 'TiketDetailController@index');
 Route::post('/pasangacara/postticket', 'PasangAcaraController@post');
+Route::post('/pasangacara/postticket', 'PasangAcaraController@post');
+// Route::post('/sendemail', 'EmailController@sendEmail');
+Route::get('/pesantiket/search/{key}','PesanController@search');
+Route::get('/pesantiket/{kategori:tags}', 'PesanController@show');
+
+Route::get('/payment/{id}', "PesanTiketController@index");
+Route::post('/cancel', "TiketDetailController@Cancel");
 Auth::routes();
 
 Route::get('/', 'BerandaController@index');

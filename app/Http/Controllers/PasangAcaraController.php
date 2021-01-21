@@ -34,14 +34,15 @@ class PasangAcaraController extends Controller
             $path="storage/$url";
             array_push($dataImage,$path);
         }
+        $upperNama=strtoupper($request->namaacara);
         $tiket->gambar=$dataImage;
         $tiket->email=Auth::user()->email;
         $tiket->lokasi=$request->lokasi;
         $tiket->mulai=$request->mulai;
         $tiket->berakhir=$request->akhir;
-        $tiket->nama=$request->namaacara;
+        $tiket->nama=$upperNama;
         $tiket->kategori=$request->kategori;
-        $tiket->desc=$request->desc;
+        $tiket->desc=$request->textarea;
         $tiket->harga=$request->harga;
         $tiket->save();
         return redirect("/pasangacara");

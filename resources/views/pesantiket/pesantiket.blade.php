@@ -22,10 +22,15 @@ PesanTiket
     </div>
   </div>
   <div class="input-group mb-3">
+
+  <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa fa-search"></i></span>
     </div>
-    <input placeholder="Temukan aktivitas terbaik disini" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <input id="searchtiket" placeholder="Temukan aktivitas terbaik disini" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+
+  </div>
+
   </div>
 </section>
 <section class="cari-ticket">
@@ -34,28 +39,28 @@ PesanTiket
       <div class="menu-item-navigator">
         <div class="menu-item">
           <div class="item">
-            <a href="">
+            <a href="/pesantiket">
               <img src="/image/pesantiketAssets/Kolaborasi/Group 246.png" alt="">
               <p>Semua</p>
             </a>
           </div>
           <img src="/image/pesantiketAssets/Line 2.png" alt="">
           <div class="item">
-            <a href="">
+            <a href="/pesantiket/wahana">
               <img src="/image/pesantiketAssets/Kolaborasi/openmoji_roller-coaster.png" alt="">
               <p>Wahana</p>
             </a>
           </div>
           <img src="/image/pesantiketAssets/Line 2.png" alt="">
           <div class="item">
-            <a href="">
+            <a href="/pesantiket/workshop">
               <img src="/image/pesantiketAssets/Kolaborasi/Ikon 1.png" alt="">
               <p>Workshop</p>
             </a>
           </div>
           <img src="/image/pesantiketAssets/Line 2.png" alt="">
           <div class="item">
-            <a href="">
+            <a href="/pesantiket/konser">
               <img src="/image/pesantiketAssets/Kolaborasi/Ikon 3.png" alt="">
               <p>Konser</p>
             </a>
@@ -77,8 +82,8 @@ PesanTiket
           ?>
       
           <div class="card" style="width: 248.68px;">
-          <a href="tiketdetail/{{$tiket->_id}}">
-            <img src="{{$tiket->gambar[0]}}" class="card-img-top" alt="...">
+          <a href="/tiketdetail/{{$tiket->_id}}">
+            <img src="/{{$tiket->gambar[0]}}" class="card-img-top" alt="...">
             <div class="card-body">
               <p class="card-text">{{$tiket->lokasi}}</p>
               <h5 class="card-title">{{$tiket->nama}}</h5>
@@ -87,6 +92,8 @@ PesanTiket
             </a>
             </div>
             @endforeach
+
+           
           <!-- </div>
           <div class="card" style="width: 248.68px;">
             <img src="/image/pesantiketAssets/Rectangle 23_2.png" class="card-img-top" alt="...">
@@ -146,11 +153,12 @@ PesanTiket
           </div> -->
 
       </div>
+      {{$data->links()}}
     </div>
   </div>
   </div>
 </section>
 
 
-<script type="module" src="js/pesantiket/pesantiket.js"></script>
+<script type="module" src="/js/pesantiket/pesantiket.js"></script>
 @endsection

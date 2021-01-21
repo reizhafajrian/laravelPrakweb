@@ -37,6 +37,7 @@
     border-style: none;
     object-fit: cover;
     border-radius: 20px;
+    width: 100%;
 }
 
 .background-image-tiket-info img {

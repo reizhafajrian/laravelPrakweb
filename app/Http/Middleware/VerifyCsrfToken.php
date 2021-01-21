@@ -13,7 +13,9 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         "http://localhost:8000/postgambar",
-        "http://localhost:8000/login"
+        "http://localhost:8000/login",
+        "http://localhost:8000/sendemail",
+        "http://localhost:8000/cancel"
        
     ];
 }

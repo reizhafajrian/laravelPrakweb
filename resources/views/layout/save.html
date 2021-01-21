@@ -1,5 +1,46 @@
 <!DOCTYPE html>
+<script type="text/javascript">
+    const csrfToken = document.head.querySelector("[name~=csrf-token][content]").content;
+    console.log(csrfToken)
+    const button = document.getElementById('beli-tiket')
+    button.onclick = function() {
+        // SnapToken acquired from previous step
+        snap.pay('<?= $snapToken ?>', {
+            // Optional
+            onSuccess: async function(result) {
 
+            },
+            // Optional
+            onPending: async function(result) {
+                const data = "<?php echo $order; ?>"
+                await fetch(`http://localhost:8000/cancel`, {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': '*/*',
+                            'X-CSRF-TOKEN': csrfToken,
+                        },
+                        "body": JSON.stringify({
+                            "order_id": `${data}`
+                        })
+                    })
+                    .then(response => {
+                        return response.text();
+                    })
+                    .then(text => {
+                        return console.log(text);
+                    })
+                    .catch(error => console.error(error));
+
+
+            },
+            // Optional
+            onError: function(result) {
+                /* You may add your own js here, this is just example */
+            }
+        });
+    };
+</script>
 
 
 <html lang="en">
